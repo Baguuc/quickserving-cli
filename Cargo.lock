@@ -309,7 +309,9 @@ name = "quickserving-cli"
 version = "0.1.0"
 dependencies = [
  "clap",
+ "log",
  "quickserving-core",
+ "simple_logger",
 ]
 
 [[package]]
