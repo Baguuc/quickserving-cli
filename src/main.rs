@@ -1,4 +1,6 @@
 use clap::Parser;
+use log::error;
+use quickserving_core::{config::Config, server::listen};
 use simple_logger::SimpleLogger;
 
 #[derive(Parser, Debug, Clone)]
@@ -17,4 +19,14 @@ fn main() {
     SimpleLogger::new().init();
 
     let cli_config = CLIConfig::parse();
+
+    let setup = listen(Config {
+        port: cli_config.port,
+        directory: cli_config.directory,
+        index_file: cli_config.index
+    });
+
+    if setup.is_err() {
+        error!("Error: {}", setup.err().unwrap());
+    }
 }
