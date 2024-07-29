@@ -11,7 +11,9 @@ struct CLIConfig {
     #[arg(short, long, default_value = ".", help = "The directory that will be served.")]
     directory: String,
     #[arg(short, long, default_value = "index.html", help = "The file that will be read from requested path when user requests url ending with '/'.")]
-    index: String
+    index: String,
+    #[arg(short, long, default_value = "404.html", help = "The file that will be served when the file requested by user is not avaible.")]
+    not_found: String
 }
 
 
@@ -23,7 +25,8 @@ fn main() {
     let setup = listen(Config {
         port: cli_config.port,
         directory: cli_config.directory,
-        index_file: cli_config.index
+        index_file: cli_config.index,
+        not_found_uri: cli_config.not_found
     });
 
     if setup.is_err() {
