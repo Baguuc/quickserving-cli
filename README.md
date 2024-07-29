@@ -38,15 +38,19 @@ quickserving
 
 quickserving-cli have plenty of cli arguments to customize how the server is setup.
 
-- -p, --port <PORT> The port that server will be listening for requests on. [default: 8080]
+- --port <PORT> The port that server will be listening for requests on. [default: 8080]
 
 #
 
-- -d, --directory <DIRECTORY> The directoryectory that will be served. [default: .]
+- --directory <DIRECTORY> The directoryectory that will be served. [default: .]
 
 #
 
--i, --index <INDEX> The file that will be read from requested path when user requests url ending with '/'. [default: index.html]
+- --index <INDEX> The file that will be read from requested path when user requests url ending with '/'. [default: index.html]
+
+#
+
+- --not-found <NOT_FOUND> The file that will be served when the file requested by user is not avaible. [default: 404.html]
 
 #
 
