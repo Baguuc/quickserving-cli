@@ -316,8 +316,8 @@ dependencies = [
 
 [[package]]
 name = "quickserving-core"
-version = "0.1.0"
-source = "git+https://github.com/quickserving/quickserving-core.git#fb4cec715ee57d7dd9a093071066f9e39e5c7e2f"
+version = "1.0.1"
+source = "git+https://github.com/quickserving/quickserving-core.git#7950a46c9238345b67115a3ec8dd5922732c98de"
 dependencies = [
  "chrono",
  "log",
