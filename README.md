@@ -8,7 +8,7 @@ CLI wrapper around the quickserving-core module.
 2. Clone the repository
 
 ```bash
-git clone https://github.com/quickserving/quickserving-cli.git
+git clone thishttps://github.com/Baguuc/quickserving-cli.git
 ```
 
 3. Build the executable
